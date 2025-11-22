@@ -11,6 +11,12 @@ import zipfile
 app = Flask(__name__)
 CORS(app)  # Frontend থেকে রিকোয়েস্ট আসার পারমিশন
 
+
+@app.route('/')
+def home():
+    return "MCQ Bot Backend is Live and Running!"
+
+
 def decode_image(data_url):
     """Base64 string থেকে ইমেজ বাইনারি ডেটায় কনভার্ট করে"""
     if not data_url:
