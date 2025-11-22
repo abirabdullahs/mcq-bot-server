@@ -152,7 +152,7 @@ def generate_sets():
                 docx_file = create_set_document(set_data, set_name)
                 zf.writestr(f"{set_name}.docx", docx_file.getvalue())
 
-        memory_file.seek(0)
+        memory_file.seek(0)  
         
         return send_file(
             memory_file,
